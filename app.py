@@ -124,6 +124,14 @@ def index_pg():
     print("In logged func ", login_flag)
     return render_template('main_index.html')
 
+
+
+@app.route('/logout')
+def logout_func():
+    global login_flag
+    login_flag = 0
+    return redirect(url_for('home_display'))
+
 @app.route('/<shortened_name>')
 def link_forwarder(shortened_name):
     with sqlite3.connect('database.db') as con:
