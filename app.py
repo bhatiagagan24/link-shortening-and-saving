@@ -99,7 +99,7 @@ def index_pg():
                 # This means the result is empty and the procedure to shorten the link and inserting the link will
                 # come here
                 ##### The code to shorten the link will come here
-                shortened_link_main = 'http://127.0.0.1:5000/' + link_name
+                shortened_link_main = 'https://link-shortening-and-storing.herokuapp.com/' + link_name
                 con.execute('''INSERT INTO tabl1(link, link_name, original_link) VALUES(?,?,?)''', (shortened_link_main, link_name,link_text_box, ))
                 con.commit()
                 # con.close()
