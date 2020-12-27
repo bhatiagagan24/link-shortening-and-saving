@@ -1,0 +1,30 @@
+<html>
+<head><title>Main Index</title></head>
+<body>
+<form method="post" name="link_converter">
+    Enter the link to shorten here,enter starting only from www. and not with https:// :  <input type="text" name="link_text_box" required/><br>
+    Name of the website --------------------------------------------------------------->  <input type="text" name="link_name" required/><br>
+    Submit Button --------------------------------------------------------------------->  <input type="submit" value="submit" name="submit" /><br>
+</form>
+{{q}}
+<br><br><br><br>
+<h4 align="centre">Saved Shortened Links or even bookmark links here for their safekeeping: -</h4> <br><br>
+<!--{{g}}-->
+<table border="1">
+    <thead>
+    <td> Id </td>
+    <td>Shortened Link</td>
+    <td>Name of the website</td>
+    <td>Original Link</td>
+    </thead>
+    {% for row in g %}
+    <tr>
+        <th> {{row[0]}} </th>
+        <th> <a href={{row[1]}}> {{row[1]}} </a></th>
+        <th> {{row[2]}}</th>
+        <th> {{row[3]}}</th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
