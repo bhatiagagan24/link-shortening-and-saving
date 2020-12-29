@@ -1,6 +1,5 @@
 # link-shortening-and-saving
 ## Password is stored in config.py file and users can change it according to their will.
-## Debugging is on and when deploying, can be turned off.
 
 This application uses Flask along with SQLite and simple HTML templates.
 It shortens long links, by using the custom names given by the users.
